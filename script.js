@@ -15,7 +15,7 @@ const orderConfirmation = document.getElementById("orderConfirmation");
 
 // Load CSV (uses YOUR existing filename: Products.CSV)
 function loadCSV() {
-  fetch("./Products.CSV")
+  fetch("products.csv")
     .then(r => r.text())
     .then(text => {
       const lines = text.split("\n").map(l => l.trim()).filter(Boolean);
@@ -314,3 +314,4 @@ checkoutForm.addEventListener("submit", (e) => {
 
 // Start
 loadCSV();
+
