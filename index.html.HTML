@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="week1.css">
+  <title>Emotional Based E-commerce</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Emotion-Based E-Commerce Application</h1>
+    <p class="subtitle">Minimum Viable Product – Mood-Based Shopping Experience</p>
+
+    <div class="controls">
+      <label><b>Select Mood:</b></label>
+      <select id="moodSelect"></select>
+
+      <label><b>Search Products:</b></label>
+      <input id="searchInput" type="text" placeholder="Type a product name..." />
+      <button id="searchButton">Search</button>
+      <button id="resetButton" class="secondary">Reset</button>
+    </div>
+
+    <div class="topbar">
+      <div id="message" class="message"></div>
+      <div class="cartSummary">
+        <span id="cartCount">Cart (0)</span>
+      </div>
+    </div>
+
+    <h2>Product Catalog</h2>
+    <p class="hint">Featured products appear first.</p>
+    <div id="productList" class="grid"></div>
+
+    <h2>Product Details</h2>
+    <div id="productDetails" class="details">
+      Select a product to view details.
+    </div>
+
+    <h2>Shopping Cart</h2>
+    <div id="cart" class="cartBox">Cart is empty.</div>
+
+    <h2>Checkout</h2>
+    <p class="hint">MVP “secure checkout”: required fields + confirmation (no payment stored).</p>
+
+    <form id="checkoutForm" class="checkout">
+      <label>
+        Full Name
+        <input type="text" id="fullName" required />
+      </label>
+
+      <label>
+        Email
+        <input type="email" id="email" required />
+      </label>
+
+      <label>
+        Address
+        <input type="text" id="address" required />
+      </label>
+
+      <button type="submit" id="placeOrderBtn">Place Order</button>
+    </form>
+
+    <div id="orderConfirmation" class="confirmation"></div>
+  </div>
+
+  <script src="Week1.JS"></script>
+</body>
+</html>
